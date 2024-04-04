@@ -1,0 +1,11 @@
+POST - saves or creates the data instance
+GET - gets the instance of data
+PUT - updates or changes the data
+DELETE - delete the data
+
+ALTER TABLE cloud_vendor_model AUTO_INCREMENT = 1;
+
+Class with CRUD operations - Controller
+Class with variable declarations & getter/setter methods - Model
+Class where you connect to database and save it in mysql - Service
+Interface with repository - Repository

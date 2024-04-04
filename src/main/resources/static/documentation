@@ -1,0 +1,60 @@
+API Documentation for: Todo Items
+
+1. Introduction
+
+Created a Todo Item API where users can save a list of items to-do under their name and email.
+
+2. Getting Started
+
+This project uses IntelliJ, Postman and MySQL. These are the urls for CRUD operations.
+
+Creating User -
+GET URL: http://localhost:8080/cloudvendor/{vendorId}
+POST URL: http://localhost:8080/cloudvendor/addVendor
+PUT URL: http://localhost:8080/cloudvendor/{vendorId}
+DELETE URL: http://localhost:8080/cloudvendor/{vendorId}
+
+Creating Todo -
+GET URL: http://localhost:8080/cloudvendor/todo/{vendorId}/getTodo
+POST URL: http://localhost:8080/cloudvendor/todo/{vendorId}/addTodo
+PUT URL: http://localhost:8080/cloudvendor/todo/{vendorId}/updateTodo
+DELETE URL: http://localhost:8080/cloudvendor/todo/{vendorId}/delTodo
+
+3. API Endpoints for Todo Items
+
+GET All Todos for a Vendor:
+URL: http://localhost:8080/todos/{vendorId}/todo
+HTTP Method: GET
+Description: Retrieve all todo items for a specific vendor. Replace {vendorId} with the actual ID of the vendor.
+
+POST Create Todos for a Vendor:
+URL: http://localhost:8080/todos/{vendorId}/todo
+HTTP Method: POST
+Description: Create a new todo item for a specific vendor. Replace {vendorId} with the actual ID of the vendor. Send the todo item details in the request body as JSON.
+
+PUT Update Todos Item for a Vendor:
+URL: http://localhost:8080/todos/{vendorId}/todo/{todoId}
+HTTP Method: PUT
+Description: Update an existing todo item for a specific vendor. Replace {vendorId} with the actual ID of the vendor and {todoId} with the ID of the todo item to be updated. Send the updated todo item details in the request body as JSON.
+
+DELETE Delete Todo Item for a Vendor:
+URL: http://localhost:8080/todos/{vendorId}/todo/{todoId}
+HTTP Method: DELETE
+Description: Delete an existing todo item for a specific vendor. Replace {vendorId} with the actual ID of the vendor and {todoId} with the ID of the todo item to be deleted.
+These URLs assume that your application is running locally on port 8080. Adjust the hostname and port if your application is hosted elsewhere.
+
+4. Example Usage
+
+I have used Postman to interact with the API. Select Body->raw->JSON. This is the format for inputs:
+
+Adding a Vendor:
+{
+    "vendorName": "John Doe",
+    "vendorEmail": "johndoe@gmail.com"
+}
+
+Adding a todo item for a vendor:
+{
+    "taskName": "Finish CC project",
+    "completed": false
+}
